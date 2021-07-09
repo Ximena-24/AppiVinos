@@ -1,15 +1,14 @@
 const express = require('express');
-const ControladorCoca = require('../controlador/controladorCoca');
+const ControladorVinos = require('../controlador/ControladorVinos');
 
 const Router = express.Router();
 
-Router.get('/',ControladorCoca.index)
-.post('/',ControladorCoca.crear)
-.get('/:key/:value',ControladorCoca.buscar,ControladorCoca.mostrar)
-.put('/:key/:value',ControladorCoca.buscar,ControladorCoca.actualizar)
-.delete('/:key/:value',ControladorCoca.buscar,ControladorCoca.eliminar);
+Router.get('/',ControladorVinos.index)
+.post('/',ControladorVinos.crear)
+.get('/:key/:value',ControladorVinos.buscar,ControladorVinos.mostrar)
+.put('/:key/:value',ControladorVinos.buscar,ControladorVinos.actualizar)
+.delete('/:key/:value',ControladorVinos.buscar,ControladorVinos.eliminar);
 
 
 module.exports = Router;
-
 
